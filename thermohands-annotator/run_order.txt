@@ -1,0 +1,12 @@
+# please run these files in order to obtain the automatic annotation
+vis_ego_exo_data.py
+infer_ego_exo_pose_mask.py
+infer_ego_exo_ir_marker.py
+infer_ego_depth_point_cloud.py
+run_kissicp.sh
+viz_kiss_icp_results.py
+infer_ego_exo_transform.py
+infer_kps_3d_triangulation.py
+infer_hand_point_cloud.py
+vis_ego_exo_anno.py
+optmize_hand_pose.py
