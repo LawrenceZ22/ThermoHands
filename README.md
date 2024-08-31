@@ -5,7 +5,8 @@ In this work, we present ThermoHands, a new benchmark for thermal image-based eg
 
 ## Dataset Download
 
-TBD
+Main: https://drive.google.com/file/d/1cXgnQEnZr-nx0LBa5mrn5-NXOp_QcL68/view?usp=drive_link
+Auxiliary: https://drive.google.com/file/d/1-tJiEXXzvqRSZiqOMqgHw0gMFAu6tlt5/view?usp=drive_link
 
 ## Dataset Directory Structure
 ```
