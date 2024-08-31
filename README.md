@@ -34,11 +34,14 @@ ${DATASET_ROOT}
 ## Citiation
 If you find ThermoHands helpful to your research, please cite 
 ```
-@article{ding2024thermohands,
-  title={ThermoHands: A Benchmark for 3D Hand Pose Estimation from Egocentric Thermal Image},
-  author={Ding, Fangqiang and Zhu, Yunzhou and Wen, Xiangyu and Lu, Chris Xiaoxuan},
-  journal={arXiv preprint arXiv:2403.09871},
-  year={2024}
+@misc{ding2024thermohandsbenchmark3dhand,
+      title={ThermoHands: A Benchmark for 3D Hand Pose Estimation from Egocentric Thermal Images}, 
+      author={Fangqiang Ding and Lawrence Zhu and Xiangyu Wen and Gaowen Liu and Chris Xiaoxuan Lu},
+      year={2024},
+      eprint={2403.09871},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2403.09871}, 
 }
 ```
 We appreciate your support!
