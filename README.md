@@ -1,11 +1,21 @@
 # ThermoHands: A Benchmark for 3D Hand Pose Estimation from Egocentric Thermal Images
 
 ## Abstract
-In this work, we present ThermoHands, a new benchmark for thermal image-based egocentric 3D hand pose estimation, aimed at overcoming challenges like varying lighting conditions and obstructions (e.g., handwear). The benchmark includes a multi-view and multi-spectral dataset collected from 28 subjects performing hand-object and hand-virtual interactions under diverse scenarios, accurately annotated with 3D hand poses through an automated process. We introduce a new baseline method, TherFormer, utilizing dual transformer modules for effective egocentric 3D hand pose estimation in thermal imagery. Our experimental results highlight TherFormer's leading performance and affirm thermal imaging's effectiveness in enabling robust 3D hand pose estimation in adverse conditions. [[Paper]](https://arxiv.org/abs/2403.09871) [[Supplymentary Video]](https://www.youtube.com/watch?v=-oXKspAEyhg).
+In this work, we present ThermoHands, a new benchmark for thermal image-based egocentric 3D hand pose estimation, aimed at overcoming challenges like varying lighting conditions and obstructions (e.g., handwear). The benchmark includes a multi-view and multi-spectral dataset collected from 28 subjects performing hand-object and hand-virtual interactions under diverse scenarios, accurately annotated with 3D hand poses through an automated process. We introduce a new baseline method, TherFormer, utilizing dual transformer modules for effective egocentric 3D hand pose estimation in thermal imagery. Our experimental results highlight TherFormer's leading performance and affirm thermal imaging's effectiveness in enabling robust 3D hand pose estimation in adverse conditions. 
+
+**ThermoHands: A Benchmark for 3D Hand Pose Estimation from Egocentric Thermal Images**
+<br/>
+[Fangqiang Ding](https://toytiny.github.io/), [Lawrence Zhu](https://lawrencez22.github.io/), [Xiangyu Wen](https://scholar.google.com/citations?user=WxgdNyAAAAAJ&hl=en&oi=ao), [Gaowen Liu](https://scholar.google.com/citations?user=WxgdNyAAAAAJ&hl=en&oi=ao), [Chris Xiaoxuan Lu](https://christopherlu.github.io/)
+<br/>
+[[arXiv]](https://arxiv.org/abs/2403.09871.pdf) [[demo]](https://www.youtube.com/watch?v=-oXKspAEyhg) 
 
 ## News
 
-In September, we aimed to manually annotate some of the auxilary data and use trangulation method mentioned in our paper to reconstruct 3D ground truth hand pose and is able to provide quantantative results on *Darkness* and *Sun Glare* environment. The quantatative results are shown below:
+#### [2024-09] Quantitative Evaluation for Challenging Scenarios
+
+To provide the numerical results under challenging settings, as we planned before, we mannually annotate the ground truth for a few sequences collected in our challenging scenairos, including **glove** and **sun glare**.
+
+Specifically, we first annotate the 2D keypoints from two viewpoints and use triangulation to obtain their 3D posisitons. For comparision, we evaluate our **TherFormer-V** models trained for different spectra on these annotated sequences and calculated the quantitative results as follows:
 
 |                        | TherFormer-V (Glove)       |                          | TherFormer-V (Sun Glare)   |                          |
 |------------------------|----------------------------|--------------------------|----------------------------|--------------------------|
@@ -15,7 +25,7 @@ In September, we aimed to manually annotate some of the auxilary data and use tr
 | NIR                    | 39.83                      | 0.282                    | 90.84                      | 0.093                    |
 | Thermal                | **39.23**                  | **0.302**                | **32.56**                  | **0.363**                |
 
-
+As seen in the table, thermal imaging-based appraoches show the best performance among different spectra in challenging scenairos.   
 
 ## Dataset Download
 
