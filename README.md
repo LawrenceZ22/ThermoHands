@@ -25,7 +25,7 @@ Specifically, we first annotate the 2D keypoints from two viewpoints and use tri
 | NIR                    | 39.83                      | 0.282                    | 90.84                      | 0.093                    |
 | Thermal                | **39.23**                  | **0.302**                | **32.56**                  | **0.363**                |
 
-As seen in the table, thermal imaging-based appraoches show the best performance among different spectra in challenging scenairos.   
+As seen in the table, thermal imaging-based appraoches show the best performance among different spectra in challenging settings, underscoring thermal imagery’s advantages in difficult lighting conditions and when hands are occluded. 
 
 ## Dataset Download
 
