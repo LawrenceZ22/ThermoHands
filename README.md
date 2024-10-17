@@ -1,6 +1,6 @@
 # ThermoHands: A Benchmark for 3D Hand Pose Estimation from Egocentric Thermal Images
 
-![Multi-view multi-spectral dataset for 3D hand pose estimation](src/teaser.png)
+![Multi-view multi-spectral dataset for 3D hand pose estimation](assets/teaser.png)
 
 ## Abstract
 In this work, we present ThermoHands, a new benchmark for thermal image-based egocentric 3D hand pose estimation, aimed at overcoming challenges like varying lighting conditions and obstructions (e.g., handwear). The benchmark includes a multi-view and multi-spectral dataset collected from 28 subjects performing hand-object and hand-virtual interactions under diverse scenarios, accurately annotated with 3D hand poses through an automated process. We introduce a new baseline method, TherFormer, utilizing dual transformer modules for effective egocentric 3D hand pose estimation in thermal imagery. Our experimental results highlight TherFormer's leading performance and affirm thermal imaging's effectiveness in enabling robust 3D hand pose estimation in adverse conditions. 
