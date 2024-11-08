@@ -19,13 +19,14 @@ To provide the numerical results under challenging settings, as we planned befor
 
 Specifically, we first annotate the 2D keypoints from two viewpoints and use triangulation to obtain their 3D posisitons. For comparision, we evaluate our **TherFormer-V** models trained for different spectra on these annotated sequences and calculated the quantitative results as follows:
 
-|                        | TherFormer-V (Glove)       |                          | TherFormer-V (Sun Glare)   |                          |
-|------------------------|----------------------------|--------------------------|----------------------------|--------------------------|
-|                        | MEPE-RA (mm) ↓             | AUC ↑                    | MEPE-RA (mm) ↓             | AUC ↑                    |
-| RGB                    | 51.94                      | 0.141                    | 38.24                      | 0.252                    |
-| Depth                  | 45.96                      | 0.206                    | 42.27                      | 0.254                    |
-| NIR                    | 39.83                      | 0.282                    | 90.84                      | 0.093                    |
-| Thermal                | **39.23**                  | **0.302**                | **32.56**                  | **0.363**                |
+|                        | TherFormer-V (Glove)       |                          |                            |  TherFormer-V (Sun Glare)|                          |                          |
+|------------------------|----------------------------|--------------------------|----------------------------|--------------------------|--------------------------|--------------------------|
+|                        | MEPE (mm)↓                 | MEPE-RA (mm) ↓           | AUC ↑                      | MEPE (mm)                | MEPE-RA (mm) ↓           | AUC ↑                    |
+| RGB                    | 68.35                      | 51.94                    | 0.141                      | 37.45                    | 38.24                    | 0.252                    |
+| Depth                  | 44.80                      | 45.96                    | 0.206                      | 50.49                    | 42.27                    | 0.254                    |
+| NIR                    | 52.85                      | 39.83                    | 0.282                      | 78.99                    | 90.84                    | 0.093                    |
+| Thermal                | 46.45                      | **39.23**                | **0.302**                  | 54.72                    | **32.56**                | **0.363**                |
+
 
 As seen in the table, thermal imaging-based appraoches show the best performance among different spectra in challenging settings, underscoring thermal imagery’s advantages in difficult lighting conditions and when hands are occluded. 
 
