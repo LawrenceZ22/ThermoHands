@@ -1,0 +1,4 @@
+# ninja log v5
+0	3258	1708542222	/home/xiangyu/THEFormer/models/dab_deformable_detr/ops/build/temp.linux-x86_64-cpython-37/home/xiangyu/THEFormer/models/dab_deformable_detr/ops/src/cpu/ms_deform_attn_cpu.o	de98dfcd6f41f29a
+1	11057	1708542319	/home/xiangyu/THEFormer/models/dab_deformable_detr/ops/build/temp.linux-x86_64-cpython-37/home/xiangyu/THEFormer/models/dab_deformable_detr/ops/src/cuda/ms_deform_attn_cuda.o	5cf87a5d2312619
+1	17945	1708542326	/home/xiangyu/THEFormer/models/dab_deformable_detr/ops/build/temp.linux-x86_64-cpython-37/home/xiangyu/THEFormer/models/dab_deformable_detr/ops/src/vision.o	b1ad827320567513
