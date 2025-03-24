@@ -1,6 +1,6 @@
 import numpy as np
 
-from datasets import seqset_htt,fhbhands,h2ohands,seqset_a2j,thermal, thermal_mano,thermal_rgb,thermal_ir, thermal_depth, thermal_jet
+from datasets import seqset_mask,fhbhands,h2ohands,seqset_a2j,thermal, thermal_mano,thermal_rgb,thermal_ir, thermal_depth, thermal_jet
 from torch.utils.data import Dataset, DataLoader
 from prefetch_generator import BackgroundGenerator
 class DataLoaderX(DataLoader):
@@ -118,7 +118,7 @@ def get_dataset_htt(
         spacing=pose_dataset.spacing,
     )
     else:
-        dataset = seqset_htt.SeqSet(
+        dataset = seqset_mask.SeqSet(
         pose_dataset=pose_dataset,
         train=not no_augm,
         queries=pose_dataset.all_queries,
