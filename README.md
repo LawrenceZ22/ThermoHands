@@ -33,7 +33,7 @@ For technical details, please refer to our paper on ACM Sensys 2025:
 
 ## 🔥 News
 - [2024-02-27] Our preprint paper is available on 👉[arXiv](https://arxiv.org/abs/2403.09871).
-- [2024-08-26] Our automatic annotation pipeline code is uploaded. See how to use at 👉[annotator](thermohands-annotator/).
+- [2024-08-26] Our automatic annotation pipeline code is uploaded. 
 - [2025-02-24] Our paper is accepted by [Sensys 2025](https://neurips.cc/) 🎉.
 - [2025-03-24] Our TherFormer baseline code is uploaded. Stay tuned for update👀!
   
@@ -65,6 +65,31 @@ Designing egocentric 3D hand pose estimation systems that can perform reliably i
 |:--:| 
 | <div align="left">***Figure 3. Overall frawework of TherFormer.** Backbone features are input to the mask-guided spatial transformer and temporal transformer to enhance the spatial representation and temporal interaction. Spatio-temporal embeddings are fed into the pose head to regress the 3D hand pose.*</div> |
 
+## 🏞️ Visualization
+
+Please see more visualization in our [demo video](https://www.youtube.com/watch?v=-oXKspAEyhg) and [project page](https://thermohands.github.io/).
+
+### 3D Hand Pose Annotation
+
+This video shows an example of 3D hand pose annotations. We show the left (blue) and right (red) hand 3D joints projected onto RGB images. From the same viewpoint, we also visualize the corresponding hand mesh annotation.
+
+<img src="assets/annotation_2.gif" width="80%" alt="hand pose annotation">
+
+### Qualitative Results (main)
+
+This part shows qualitative results for different spectra under the well-illuminated office (main) setting. 3D hand joints are projected onto 2D images for visualization. Ground truth hand pose is shown in green while the prediction results in blue.
+
+<img src="assets/normal_object_2_clip.gif" width="48%"/> &nbsp;
+<img src="assets/normal_virtual_2.gif" width="48%"/>
+
+### Qualitative Results (auxiliary)
+
+Qualitative results for thermal vs. RGB (NIR) under our four auxiliary settings, including the glove, darkness, sun glare and kitchen scenairos. We show the left (blue) and right (red) hand 3D joints projected onto 2D images.
+
+#### Glove 
+
+<img src="assets/glove_object_2_clip.gif" width="48%"/> &nbsp;
+<img src="assets/glove_virtual_2.gif" width="48%"/>
 
 ## Dataset Download
 
