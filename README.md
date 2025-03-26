@@ -91,6 +91,18 @@ Qualitative results for thermal vs. RGB (NIR) under our four auxiliary settings,
 <img src="assets/glove_object_2_clip.gif" width="48%"/> &nbsp;
 <img src="assets/glove_virtual_2.gif" width="48%"/>
 
+#### Darkness
+
+<img src="assets/darkness_object_2_clip.gif" width="48%"/> &nbsp;
+<img src="assets/darkness_virtual_2.gif" width="48%"/>
+
+#### Sun glare 
+
+<img src="assets/sun_glare_2_clip.gif" width="48%"/>
+
+#### Kitchen
+<img src="assets/kitchen_2_clip.gif" width="48%"/>
+
 ## Dataset Download
 
 Main: https://drive.google.com/file/d/1cXgnQEnZr-nx0LBa5mrn5-NXOp_QcL68/view?usp=drive_link
@@ -119,19 +131,6 @@ ${DATASET_ROOT}
 
 ```
 
-## Citiation
-If you find ThermoHands helpful to your research, please cite 
-```
-@misc{ding2024thermohandsbenchmark3dhand,
-      title={ThermoHands: A Benchmark for 3D Hand Pose Estimation from Egocentric Thermal Images}, 
-      author={Fangqiang Ding and Lawrence Zhu and Xiangyu Wen and Gaowen Liu and Chris Xiaoxuan Lu},
-      year={2024},
-      eprint={2403.09871},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2403.09871}, 
-}
-```
-We appreciate your support!
 
-## Automatic Hand Pose Annotation
+
+<!-- ## Automatic Hand Pose Annotation -->
