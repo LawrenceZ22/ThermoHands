@@ -1,34 +1,70 @@
+<div align="center">  
+ 
 # ThermoHands: A Benchmark for 3D Hand Pose Estimation from Egocentric Thermal Images
+</div>
 
-![Multi-view multi-spectral dataset for 3D hand pose estimation](assets/teaser.png)
+<div align="center">  
 
-## Abstract
-In this work, we present ThermoHands, a new benchmark for thermal image-based egocentric 3D hand pose estimation, aimed at overcoming challenges like varying lighting conditions and obstructions (e.g., handwear). The benchmark includes a multi-view and multi-spectral dataset collected from 28 subjects performing hand-object and hand-virtual interactions under diverse scenarios, accurately annotated with 3D hand poses through an automated process. We introduce a new baseline method, TherFormer, utilizing dual transformer modules for effective egocentric 3D hand pose estimation in thermal imagery. Our experimental results highlight TherFormer's leading performance and affirm thermal imaging's effectiveness in enabling robust 3D hand pose estimation in adverse conditions. 
+[![Static Badge](https://img.shields.io/badge/arXiv-PDF-green?style=flat&logo=arXiv&logoColor=green)](https://arxiv.org/abs/2403.09871) 
+[![YouTube Badge](https://img.shields.io/badge/YouTube-Watch-red?style=flat-square&logo=youtube)](https://www.youtube.com/watch?v=-oXKspAEyhg)
+[![License: Apache](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE) [![Project Page](https://img.shields.io/badge/Page-ThermoHands-blue)](https://thermohands.github.io/) [![Data](https://img.shields.io/badge/GoogleDrive-Data%20A-orange?style=flat&logo=google-drive)](https://drive.google.com/file/d/1cXgnQEnZr-nx0LBa5mrn5-NXOp_QcL68/view) [![Data](https://img.shields.io/badge/GoogleDrive-Data%20B-orange?style=flat&logo=google-drive)](https://drive.google.com/file/d/1-tJiEXXzvqRSZiqOMqgHw0gMFAu6tlt5/view)
+
+
+</div>
+
+<p align="center">
+<img src='assets/data_2.gif' width="700">
+</p>
+
+
+This is the official repository of the **ThermoHands**, the first benchmark focused on thermal image-based egocentric 3D hand pose estimation. 
+For technical details, please refer to our paper on ACM Sensys 2025:
 
 **ThermoHands: A Benchmark for 3D Hand Pose Estimation from Egocentric Thermal Images**
 <br/>
-[Fangqiang Ding](https://toytiny.github.io/), [Lawrence Zhu](https://lawrencez22.github.io/), [Xiangyu Wen](https://scholar.google.com/citations?user=WxgdNyAAAAAJ&hl=en&oi=ao), [Gaowen Liu](https://scholar.google.com/citations?user=WxgdNyAAAAAJ&hl=en&oi=ao), [Chris Xiaoxuan Lu](https://christopherlu.github.io/)
+[Fangqiang Ding<sup>1,*</sup>](https://toytiny.github.io/), [Yunzhou Zhu<sup>2,*</sup>](https://lawrencez22.github.io/), [Xiangyu Wen<sup>1</sup>](https://ericwen2001.github.io/), [Gaowen Liu<sup>3</sup>](https://yimingli-page.github.io/), [Chris Xiaoxuan Lu<sup>4,†</sup>](https://christopherlu.github.io/)
 <br/>
-[[arXiv]](https://arxiv.org/abs/2403.09871.pdf) [[demo]](https://www.youtube.com/watch?v=-oXKspAEyhg) 
-
-## News
-
-#### [2024-09] Quantitative Evaluation for Challenging Scenarios
-
-To provide the numerical results under challenging settings, as we planned before, we mannually annotate the ground truth for a few sequences collected in our challenging scenairos, including **glove** and **sun glare**.
-
-Specifically, we first annotate the 2D keypoints from two viewpoints and use triangulation to obtain their 3D posisitons. For comparision, we evaluate our **TherFormer-V** models trained for different spectra on these annotated sequences and calculated the quantitative results as follows:
-
-|                        | TherFormer-V (Glove)       |                          |                            |  TherFormer-V (Sun Glare)|                          |                          |
-|------------------------|----------------------------|--------------------------|----------------------------|--------------------------|--------------------------|--------------------------|
-|                        | MEPE (mm)↓                 | MEPE-RA (mm) ↓           | AUC ↑                      | MEPE (mm)                | MEPE-RA (mm) ↓           | AUC ↑                    |
-| RGB                    | 68.35                      | 51.94                    | 0.141                      | 37.45                    | 38.24                    | 0.252                    |
-| Depth                  | 44.80                      | 45.96                    | 0.206                      | 50.49                    | 42.27                    | 0.254                    |
-| NIR                    | 52.85                      | 39.83                    | 0.282                      | 78.99                    | 90.84                    | 0.093                    |
-| Thermal                | 46.45                      | **39.23**                | **0.302**                  | 54.72                    | **32.56**                | **0.363**                |
+[[arXiv]](https://arxiv.org/abs/2403.09871) [[page]](https://thermohands.github.io/) [[demo]](https://www.youtube.com/watch?v=-oXKspAEyhg) [[data-a]](https://drive.google.com/file/d/1cXgnQEnZr-nx0LBa5mrn5-NXOp_QcL68/view) [[data-b]](https://drive.google.com/file/d/1-tJiEXXzvqRSZiqOMqgHw0gMFAu6tlt5/view) 
+<br/>
+<sup>1</sup>University of Edinburgh, <sup>2</sup>Georgia Institute of Technology, <sup>3</sup>Cisco, <sup>4</sup>UCL
+<br/>
+*Equal contribution, †Corresponding author
 
 
-As seen in the table, thermal imaging-based appraoches show the best performance among different spectra in challenging settings, underscoring thermal imagery’s advantages in difficult lighting conditions and when hands are occluded. 
+## 🔥 News
+- [2024-02-27] Our preprint paper is available on 👉[arXiv](https://arxiv.org/abs/2403.09871).
+- [2024-08-26] Our automatic annotation pipeline code is uploaded. See how to use at 👉[annotator](thermohands-annotator/).
+- [2025-02-24] Our paper is accepted by [Sensys 2025](https://neurips.cc/) 🎉.
+- [2025-03-24] Our TherFormer baseline code is uploaded. Stay tuned for update👀!
+  
+## 🔗 Citation
+If you find our work helpful to your research, please consider citing:
+
+```shell
+@InProceedings{Ding_2025_Sensys,
+  title={ThermoHands: A Benchmark for 3D Hand Pose Estimation from Egocentric Thermal Images},
+  author={Ding, Fangqiang and Zhu, Yunzhou and Wen, Xiangyu and and Liu, Gaowen and Lu, Chris Xiaoxuan},
+  booktitle={23rd ACM Conference on Embedded Networked Sensor Systems (Sensys)},
+  year={2025}
+}
+```
+## 📝 Abstract 
+Designing egocentric 3D hand pose estimation systems that can perform reliably in complex, real-world scenarios is crucial for downstream applications. Previous approaches using RGB or NIR imagery struggle in challenging conditions: RGB methods are susceptible to lighting variations and obstructions like handwear, while NIR techniques can be disrupted by sunlight or interference from other NIR-equipped devices. To address these limitations, we present ThermoHands, the first benchmark focused on thermal image-based egocentric 3D hand pose estimation, demonstrating the potential of thermal imaging to achieve robust performance under these conditions. The benchmark includes a multi-view and multi-spectral dataset collected from 28 subjects performing hand-object and hand-virtual interactions under diverse scenarios, accurately annotated with 3D hand poses through an automated process. We introduce a new baseline method, TherFormer, utilizing dual transformer modules for effective egocentric 3D hand pose estimation in thermal imagery. Our experimental results highlight TherFormer's leading performance and affirm thermal imaging's effectiveness in enabling robust 3D hand pose estimation in adverse conditions.
+
+## 📦 Method
+
+| ![pipeline.jpg](assets/teaser.png) | 
+|:--:| 
+| <div align="left">***Figure 1. Data capture setup.** We develop a customized head-mounted sensor platform (HMSP) and an exocentric platform to record multi-view multi-spectral data. During the capture, our participants are asked to perform predefined hand-object and hand-virtual interaction actions within the playground above the table.*</div> |
+
+| ![pipeline.jpg](assets/anno_pipeline.png) | 
+|:--:| 
+| <div align="left">***Figure 2. Automatic annotation pipeline.** We utilize the multi-view RGB and depth images as the input source and retrieve constraint information with off-the-shelf MediaPipe Hands and SAM. Various error terms are formulated to optimize the MANO parameters to obtain the 3D hand pose annotation.*</div> |
+
+| ![pipeline.jpg](assets/network_figure.png) | 
+|:--:| 
+| <div align="left">***Figure 3. Overall frawework of TherFormer.** Backbone features are input to the mask-guided spatial transformer and temporal transformer to enhance the spatial representation and temporal interaction. Spatio-temporal embeddings are fed into the pose head to regress the 3D hand pose.*</div> |
+
 
 ## Dataset Download
 
@@ -72,3 +108,5 @@ If you find ThermoHands helpful to your research, please cite
 }
 ```
 We appreciate your support!
+
+## Automatic Hand Pose Annotation
