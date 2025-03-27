@@ -207,4 +207,5 @@ Many thanks to these excellent projects:
 - [HTT](https://github.com/fylwen/HTT)
 - [Segment-anything](https://github.com/facebookresearch/segment-anything)
 - [Mediapipe](https://github.com/google-ai-edge/mediapipe/tree/master)
+- [Manopth](https://github.com/hassony2/manopth)
   
