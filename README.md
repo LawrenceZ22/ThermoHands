@@ -137,7 +137,20 @@ ${DATASET_ROOT}
 where, for the same subject, we place hand-object interaction actions into subject_xx folder while hand-virtual interaciton actions into subject_xx_gestures folder. Data captured from the egocentric and exocentric view is stored seperately. 
 
 ### Installation 
-
+We test our code in following enviroment:
+Ubuntu 20.04 python 3.9 pytorch 2.2.0 CUDA 11.8 with Nivida GTX 3090
+Please install pytorch compatible to your device according to offical pytorch web page.
+Other packages can be install via pip:
+```
+cd TherFormer
+pip install -r requirements.txt
+```
+Our code also depends on libyana and DAB-DETR:
+```
+pip install git+https://github.com/hassony2/libyana@v0.2.0
+cd models/dab_deformable_detr/ops
+python setup.py build install
+```
 ### Running
 
 ## 🔧 Automatic Hand Pose Annotation
