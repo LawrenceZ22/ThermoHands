@@ -136,8 +136,75 @@ ${DATASET_ROOT}
 ```
 where, for the same subject, we place hand-object interaction actions into subject_xx folder while hand-virtual interaciton actions into subject_xx_gestures folder. Data captured from the egocentric and exocentric view is stored seperately. 
 
-## Installation 
+### Installation 
 
-## Running
+### Running
 
-<!-- ## Automatic Hand Pose Annotation -->
+## 🔧 Automatic Hand Pose Annotation
+Besides our baseline code, we also release our self-developed automatic hand pose annotation tools in [thermohands-annotator](/thermohands-annotator/). You can use this code to generate the 3D hand pose annotations for your own data. 
+
+> Note: our automatic annotation method is designed for two-view settings and demand depth and RGB image capture from each view, as well as camera calibrations. However, you can modify our code to fit your own settings if necessary.
+
+First of all, please organize your capture data into the directory structure like this:
+
+```
+${DATA_ROOT}
+|-- subject_01
+|   |-- cut_paper
+|   |   |-- egocentric
+|   |   |   |-- depth
+|   |   |   |   |-- 1707151988183.png 
+|   |   |   |   |-- ...
+|   |   |   |-- ir
+|   |   |   |   |-- 1707151988183.png 
+|   |   |   |   |-- ...  
+|   |   |   |-- rgb
+|   |   |   |   |-- 1707151988183.png 
+|   |   |   |   |-- ...  
+|   |   |   |-- thermal
+|   |   |   |   |-- 1707151988186334431.tiff 
+|   |   |   |   |-- ...  
+|   |   |-- exocentric
+|   |   |   |-- depth
+|   |   |   |-- rgb
+|   |-- fold_paper
+|   |   |-- egocentric
+|   |   |-- exocentric
+|   |-- ...
+|-- subject_02
+|-- ...
+```
+Second, install all libraries our used tools by the following command (an independent conda environment is recommended):
+
+```
+pip install -r requirements.txt
+```
+Then, run our pipeline code for automatic 3D hand pose annotation by the following command:
+
+```
+cd thermohands-annotator
+python pipeline.py \
+    --subs 01 18 25 \ # replace with your own subject indices 
+    --root_dir /path/to/data \ # where you place the data capture
+    --save_dir /path/to/output # where you save the annotation output
+```
+Our pipeline contains 7 steps:
+
+1. Visualize all capture data and save their images
+2. Infer point cloud from ego depth image and run KISS-ICP to obtain the odometry
+3. Annotate markers for the first frames and calculate the transformation between two views. This step demands the graphical interface for marker labelling. Please label the marker in the same order from two views.
+4. Infer 2D hand pose and mask, infer 3D hand pose and hand point cloud
+5. Optimize the 3D hand pose by fitting MANO model
+6. Generate 2D mask ground truth based on hand pose ground truth
+7. Make annotation movies
+
+You can use `state_dataset.py` to summarize your dataset and  `th2player.py` to visualize the 3D hand mesh. Make proper modification to these files' path parameters to adapt to your own dataset.
+
+## Acknowledgement
+
+Many thanks to these excellent projects:
+
+- [HTT](https://github.com/fylwen/HTT)
+- [Segment-anything](https://github.com/facebookresearch/segment-anything)
+- [Mediapipe](https://github.com/google-ai-edge/mediapipe/tree/master)
+  
