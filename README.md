@@ -53,7 +53,7 @@ Designing egocentric 3D hand pose estimation systems that can perform reliably i
 
 ## 📦 Method
 
-| ![pipeline.jpg](assets/teaser.png) | 
+| ![pipeline.jpg](assets/data_capture.png) | 
 |:--:| 
 | <div align="left">***Figure 1. Data capture setup.** We develop a customized head-mounted sensor platform (HMSP) and an exocentric platform to record multi-view multi-spectral data. During the capture, our participants are asked to perform predefined hand-object and hand-virtual interaction actions within the playground above the table.*</div> |
 
@@ -96,20 +96,24 @@ Qualitative results for thermal vs. RGB (NIR) under our four auxiliary settings,
 <img src="assets/darkness_object_2_clip.gif" width="48%"/> &nbsp;
 <img src="assets/darkness_virtual_2.gif" width="48%"/>
 
-#### Sun glare 
+#### Sun glare & Kitchen
 
-<img src="assets/sun_glare_2_clip.gif" width="48%"/>
-
-#### Kitchen
+<img src="assets/sun_glare_2_clip.gif" width="48%"/> &nbsp;
 <img src="assets/kitchen_2_clip.gif" width="48%"/>
 
-## Dataset Download
 
-Main: https://drive.google.com/file/d/1cXgnQEnZr-nx0LBa5mrn5-NXOp_QcL68/view?usp=drive_link
+## 🚀 Getting Started
 
-Auxiliary: https://drive.google.com/file/d/1-tJiEXXzvqRSZiqOMqgHw0gMFAu6tlt5/view?usp=drive_link
+### Dataset Download
 
-## Dataset Directory Structure
+Our full dataset is splited into two parts: the main part is collected under the well-illumiated office setting, while the auxiliary part is obtained under our four challenging settings.
+
+- Main part - [[Download link]](https://drive.google.com/file/d/1cXgnQEnZr-nx0LBa5mrn5-NXOp_QcL68/view?usp=drive_link)
+
+- Auxiliary part - [[Download link]](https://drive.google.com/file/d/1-tJiEXXzvqRSZiqOMqgHw0gMFAu6tlt5/view?usp=drive_link)
+
+After downloading, the dataset directory structure should look like this:
+
 ```
 ${DATASET_ROOT}
 |-- egocenctirc
@@ -130,7 +134,10 @@ ${DATASET_ROOT}
 |-- exocentric
 
 ```
+where, for the same subject, we place hand-object interaction actions into subject_xx folder while hand-virtual interaciton actions into subject_xx_gestures folder. Data captured from the egocentric and exocentric view is stored seperately. 
 
+## Installation 
 
+## Running
 
 <!-- ## Automatic Hand Pose Annotation -->
