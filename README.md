@@ -138,7 +138,12 @@ where, for the same subject, we place hand-object interaction actions into subje
 
 ### Installation 
 We test our code in following enviroment:
-Ubuntu 20.04 python 3.9 pytorch 2.2.0 CUDA 11.8 with Nivida GTX 3090
+```
+Ubuntu 20.04
+python 3.9
+pytorch 2.2.0
+CUDA 11.8
+```
 Please install pytorch compatible to your device according to offical pytorch web page.
 Other packages can be install via pip:
 ```
@@ -214,9 +219,9 @@ Our pipeline contains 7 steps:
 You can use `state_dataset.py` to summarize your dataset and  `th2player.py` to visualize the 3D hand mesh. Make proper modification to these files' path parameters to adapt to your own dataset.
 
 ## 🔧 TherFormer baseline
-We follow [HTT](https://github.com/fylwen/HTT) to use lmdb during training, thus data prepocessing is required before the training. Please refer to [make_lmdb.py](https://github.com/LawrenceZ22/ThermoHands/blob/main/TherFormer/make_lmdb.py) as example.
+We follow [HTT](https://github.com/fylwen/HTT) to use lmdb during training, thus data prepocessing is required before the training. Please refer to [make_lmdb.py](https://github.com/LawrenceZ22/ThermoHands/blob/main/TherFormer/make_lmdb.py) as an example.
 
-To train a therformer-V for thermal images:
+To train the therformer-V for thermal images:
 ```
 cd TherFormer
 python train_baseline.py --dataset_folder [your_data_folder] --cache_folder [you_workspace_path] --train_dataset thermal
