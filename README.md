@@ -213,6 +213,21 @@ Our pipeline contains 7 steps:
 
 You can use `state_dataset.py` to summarize your dataset and  `th2player.py` to visualize the 3D hand mesh. Make proper modification to these files' path parameters to adapt to your own dataset.
 
+## 🔧 TherFormer baseline
+We follow [HTT](https://github.com/fylwen/HTT) to use lmdb during training, thus data prepocessing is required before the training. Please refer to [make_lmdb.py](https://github.com/LawrenceZ22/ThermoHands/blob/main/TherFormer/make_lmdb.py) as example.
+
+To train a therformer-V for thermal images:
+```
+cd TherFormer
+python train_baseline.py --dataset_folder [your_data_folder] --cache_folder [you_workspace_path] --train_dataset thermal
+```
+Simliarly, to train the model for IR images:
+```
+python train_baseline.py --dataset_folder [your_data_folder] --cache_folder [you_workspace_path] --train_dataset thermal_ir --experiment_tag THEFomer_ir
+```
+
+For the non-video version, please set  both the "--ntokens_pose" and "--ntokens_action" to 1.
+
 ## Acknowledgement
 
 Many thanks to these excellent projects:
