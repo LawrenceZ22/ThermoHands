@@ -34,7 +34,7 @@ For technical details, please refer to our paper on ACM Sensys 2025:
 ## 🔥 News
 - [2024-02-27] Our preprint paper is available on 👉[arXiv](https://arxiv.org/abs/2403.09871).
 - [2024-08-26] Our automatic annotation pipeline code is uploaded. 
-- [2025-02-24] Our paper is accepted by [Sensys 2025](https://neurips.cc/) 🎉.
+- [2025-02-24] Our paper is accepted by [Sensys 2025](https://sensys.acm.org/2025/) (acceptance rate≈18%)🎉.
 - [2025-03-24] Our TherFormer baseline code is uploaded. Stay tuned for update👀!
   
 ## 🔗 Citation
