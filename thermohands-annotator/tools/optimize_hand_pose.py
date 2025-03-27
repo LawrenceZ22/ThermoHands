@@ -285,8 +285,8 @@ def hand_optimiztion(root_dir, save_dir, device = 1):
             if not os.path.exists(save_path_dict[key]):
                 os.makedirs(save_path_dict[key])
        
-        ego_calib_file = "/mnt/data/MultimodalEgoHands/calibration/ego_calib.json"
-        exo_calib_file = "/mnt/data/MultimodalEgoHands/calibration/exo_calib.json"
+        ego_calib_file = root_dir.split('/')[:-1] + '/calibration/ego_calib.json'
+        exo_calib_file = root_dir.split('/')[:-1] + '/calibration/exo_calib.json'
         rgb_files = sorted(glob(rgb_path + '/'+ '*.png'))
         rgb_exo_files = sorted(glob(rgb_exo_path + '/'+ '*.png'))
         mask_files = sorted(glob(mask_path + '/'+ '*.csv'))

@@ -136,8 +136,8 @@ def infer_transform_matrix(root_dir, save_dir, kiss_icp_dir):
         if not os.path.exists(vis_odom_path):
             os.makedirs(vis_odom_path)
         #  read the egocentric calibration file
-        ego_calib_file = '/mnt/data/MultimodalEgoHands/calibration/ego_calib.json'
-        exo_calib_file = '/mnt/data/MultimodalEgoHands/calibration/exo_calib.json'
+        ego_calib_file = root_dir.split('/')[:-1] + '/calibration/ego_calib.json'
+        exo_calib_file = root_dir.split('/')[:-1] + '/calibration/exo_calib.json'
         # Open the file in read mode ('r')
         with open(ego_calib_file, 'r') as file:
             ego_calib = json.load(file)

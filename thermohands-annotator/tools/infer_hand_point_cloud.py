@@ -122,8 +122,8 @@ def infer_hand_pcd(root_dir, save_dir):
     clips = sorted(os.listdir(root_dir))
     for clip in clips: 
         path = os.path.join(root_dir, clip)
-        ego_calib_file = '/mnt/data/MultimodalEgoHands/calibration/ego_calib.json'
-        exo_calib_file = "/mnt/data/MultimodalEgoHands/calibration/exo_calib.json"
+        ego_calib_file = root_dir.split('/')[:-1] + '/calibration/ego_calib.json'
+        exo_calib_file = root_dir.split('/')[:-1] + '/calibration/exo_calib.json'
         depth_path = os.path.join(path, 'egocentric', 'depth')
         depth_exo_path = os.path.join(path, 'exocentric', 'depth')
         transform_path = os.path.join(save_dir, clip, 'exo_ego_transform.csv')

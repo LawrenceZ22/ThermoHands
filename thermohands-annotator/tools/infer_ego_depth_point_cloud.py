@@ -81,7 +81,7 @@ def infer_ego_point_cloud(root_dir, save_dir):
     clips = sorted(os.listdir(root_dir))
     for clip in clips: 
         path = os.path.join(root_dir, clip)
-        ego_calib_file = '/mnt/data/MultimodalEgoHands/calibration/ego_calib.json'
+        ego_calib_file = root_dir.split('/')[:-1] + '/calibration/ego_calib.json'
         depth_path = os.path.join(path, 'egocentric', 'depth')
         save_pc_path = os.path.join(save_dir, clip, 'ego', 'depth_pcd')
         vis_pc_path = os.path.join(save_dir, clip, 'vis_ego', 'depth_pcd')

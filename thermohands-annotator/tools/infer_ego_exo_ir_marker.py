@@ -123,7 +123,7 @@ def process_marker_exo(path, save_marker_exo_path, vis_marker_exo_path, exo_cali
 
 def infer_ego_exo_markers(root_dir, save_dir):
 
-    exo_calib_file = '/mnt/data/MultimodalEgoHands/calibration/exo_calib.json'
+    exo_calib_file = root_dir.split('/')[:-1] + '/calibration/exo_calib.json'
     with open(exo_calib_file, 'r') as file:
         exo_calib = json.load(file)
     clips = sorted(os.listdir(root_dir))

@@ -124,7 +124,7 @@ def infer_hand_mask_gt(root_dir, save_dir):
     clips = sorted(os.listdir(root_dir))
     for clip in clips: 
         clip_path = os.path.join(save_dir, clip)
-        ego_calib_file = '/mnt/data/MultimodalEgoHands/calibration/ego_calib_opencv.json'
+        ego_calib_file = root_dir.split('/')[:-1] + '/calibration/ego_calib.json'
         gt_path = os.path.join(clip_path, 'gt_info')
         save_mask_path = os.path.join(save_dir, clip, 'gt_mask_info')
         vis_mask_path = os.path.join(save_dir, clip, 'gt_mask_vis')

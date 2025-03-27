@@ -173,14 +173,14 @@ def infer_pose_mask(root_dir, save_dir, device = 'cuda:1', kitchen = 'False'):
     mp_hands = mp.solutions.hands  
     # Initialize the SAM module
     DEVICE = torch.device(device if torch.cuda.is_available() else 'cpu')
-    sam = sam_model_registry["vit_l"](checkpoint="/home/fangqiang/thermal-hand/sam/sam_vit_l_0b3195.pth").to(device=DEVICE)
+    sam = sam_model_registry["vit_l"](checkpoint="../sam/sam_vit_l_0b3195.pth").to(device=DEVICE)
     predictor = SamPredictor(sam)
     # predictor = None
 
-    ego_calib_file = '/mnt/data/MultimodalEgoHands/calibration/ego_calib.json'
-    exo_calib_file = '/mnt/data/MultimodalEgoHands/calibration/exo_calib.json'
+    ego_calib_file = root_dir.split('/')[:-1] + '/calibration/ego_calib.json'
+    exo_calib_file = root_dir.split('/')[:-1] + '/calibration/exo_calib.json'
     clips = sorted(os.listdir(root_dir))
-    for clip in clips[4:5]: 
+    for clip in clips: 
         hands = mp_hands.Hands(min_detection_confidence=0.1)  
         hands_exo = mp_hands.Hands(min_detection_confidence=0.1)
         path = os.path.join(root_dir, clip)

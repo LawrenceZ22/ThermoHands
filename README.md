@@ -136,6 +136,8 @@ ${DATASET_ROOT}
 ```
 where, for the same subject, we place hand-object interaction actions into subject_xx folder while hand-virtual interaciton actions into subject_xx_gestures folder. Data captured from the egocentric and exocentric view is stored seperately. 
 
+If you would like to use our calibration information for further development, please refer to our [calibration](/calibration/) folder.
+
 ### Installation 
 We test our code in following enviroment:
 ```
@@ -167,6 +169,9 @@ First of all, please organize your capture data into the directory structure lik
 
 ```
 ${DATA_ROOT}
+|-- calibration
+|   |-- ego_calib.json
+|   |-- exo_calib.json
 |-- subject_01
 |   |-- cut_paper
 |   |   |-- egocentric
@@ -192,11 +197,17 @@ ${DATA_ROOT}
 |-- subject_02
 |-- ...
 ```
+
+where `ego_calib.json` stores the camera instrinsic and extrinsic for the egocentric platform while `exo_calib.json` for the exocentric platforms. Please refer to our [calibration](/calibration/) folder.
+
 Second, install all libraries our used tools by the following command (an independent conda environment is recommended):
 
 ```
 pip install -r requirements.txt
 ```
+
+Also, download the Segment-Anything pretrained model from [here](https://dl.fbaipublicfiles.com/segment_anything/sam_vit_l_0b3195.pth) and save as `\sam\sam_vit_l_0b3195.pth`.
+
 Then, run our pipeline code for automatic 3D hand pose annotation by the following command:
 
 ```
