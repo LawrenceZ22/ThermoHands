@@ -24,7 +24,7 @@ For technical details, please refer to our paper on ACM Sensys 2025:
 <br/>
 [Fangqiang Ding<sup>1,*</sup>](https://toytiny.github.io/), [Yunzhou Zhu<sup>2,*</sup>](https://lawrencez22.github.io/), [Xiangyu Wen<sup>1</sup>](https://ericwen2001.github.io/), [Gaowen Liu<sup>3</sup>](https://yimingli-page.github.io/), [Chris Xiaoxuan Lu<sup>4,†</sup>](https://christopherlu.github.io/)
 <br/>
-[[arXiv]](https://arxiv.org/abs/2403.09871) [[page]](https://thermohands.github.io/) [[demo]](https://www.youtube.com/watch?v=-oXKspAEyhg) [[data-a]](https://drive.google.com/file/d/1cXgnQEnZr-nx0LBa5mrn5-NXOp_QcL68/view) [[data-b]](https://drive.google.com/file/d/1-tJiEXXzvqRSZiqOMqgHw0gMFAu6tlt5/view) 
+[[arXiv]](https://arxiv.org/abs/2403.09871) [[page]](https://thermohands.github.io/) [[demo]](https://www.youtube.com/watch?v=-oXKspAEyhg) [[data-a]](https://drive.google.com/file/d/1cXgnQEnZr-nx0LBa5mrn5-NXOp_QcL68/view) [[data-b]](https://drive.google.com/file/d/1-tJiEXXzvqRSZiqOMqgHw0gMFAu6tlt5/view) [[slide]](/assets/thermohands_pre.pdf)
 <br/>
 <sup>1</sup>University of Edinburgh, <sup>2</sup>Georgia Institute of Technology, <sup>3</sup>Cisco, <sup>4</sup>UCL
 <br/>
@@ -36,6 +36,7 @@ For technical details, please refer to our paper on ACM Sensys 2025:
 - [2024-08-26] Our automatic annotation pipeline code is uploaded. 
 - [2025-02-24] Our paper is accepted by [Sensys 2025](https://sensys.acm.org/2025/) (acceptance rate≈18%)🎉.
 - [2025-03-24] Our TherFormer baseline code is uploaded. Stay tuned for update👀!
+- [2025-04-22] Our ThermoHands oral presentation slides are uploaded. Check 👉[slides](/assets/thermohands_pre.pdf) for more details.
   
 ## 🔗 Citation
 If you find our work helpful to your research, please consider citing:
